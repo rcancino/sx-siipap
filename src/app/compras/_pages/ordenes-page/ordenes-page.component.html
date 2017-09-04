@@ -18,12 +18,10 @@
     </span>
     </div>
     <md-divider></md-divider>
-
-    <!-- <sx-compras-list [compras]="compras$ | async" (edit)="onEdit($event)" (info)="onInfo($event)"></sx-compras-list> -->
-      <h1>PENDIENTE</h1>
-      <!-- <a md-fab td-sidenav-content color="accent" class="md-fab-position-bottom-right" style="bottom:20px; position: fixed;"> 
-          <md-icon>add</md-icon>
-      </a> -->
+      <sx-ordenes-list [compras]="ordenes$ | async" 
+        (edit)=onEdit($event)
+        (info)=onInfo($event)>
+      </sx-ordenes-list>
     <md-divider></md-divider>
 
   </md-card>

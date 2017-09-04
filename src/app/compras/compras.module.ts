@@ -9,6 +9,7 @@ import { OrdenAddPartidaComponent } from './_components/orden-add-partida/orden-
 import { ProveedorFieldComponent } from './_components/proveedor-field/proveedor-field.component';
 import { OrdenesService } from "./services/ordenes.service";
 import { OrdenPartidasListComponent } from './_components/orden-partidas-list/orden-partidas-list.component';
+import { OrdenesListComponent } from './_components/ordenes-list/ordenes-list.component';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { OrdenPartidasListComponent } from './_components/orden-partidas-list/or
     SharedModule,
     ComprasRoutingModule
   ],
-  declarations: [ComprasMainPageComponent, OrdenesPageComponent, OrdenesCreatePageComponent, OrdenAddPartidaComponent, ProveedorFieldComponent, OrdenPartidasListComponent],
+  declarations: [ComprasMainPageComponent, OrdenesPageComponent, OrdenesCreatePageComponent, OrdenAddPartidaComponent, ProveedorFieldComponent, OrdenPartidasListComponent, OrdenesListComponent],
   providers: [OrdenesService]
 })
 export class ComprasModule { }

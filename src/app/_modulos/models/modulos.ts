@@ -5,7 +5,8 @@ export const MODULOS: Modulo[] = [
     id: 1,
     nombre: 'Compras',
     path: '/compras',
-    descripcion: 'Compras de materia prima y sus cuentas por pagar ', icon: 'shopping_cart'
+    descripcion: 'Compras de materia prima y sus cuentas por pagar ', 
+    icon: 'shopping_cart'
   },
   {
     id: 2,

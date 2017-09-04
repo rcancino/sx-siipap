@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs/Observable";
+
+import * as fromRoot from '../../reducers';
+import { Modulo } from "../../_modulos/models/modulo";
 
 @Component({
   selector: 'sx-module-selector',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModuleSelectorComponent implements OnInit {
 
-  constructor() { }
+  modulos$: Observable<Modulo[]>;
+
+  constructor(private store: Store<fromRoot.State>) { }
 
   ngOnInit() {
+    this.modulos$ = this.store.select(fromRoot.getModulos);
+    this.store.select(fromRoot.getCurrentModulo).subscribe( modulo => console.log('Modulo: ', modulo));
   }
 
 }
