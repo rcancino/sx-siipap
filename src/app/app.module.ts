@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import {RouterStateSerializer, StoreRouterConnectingModule} from '@ngrx/router-store';
 import { DBModule } from '@ngrx/db';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 import { reducers, metaReducers } from './reducers';
 import { CustomRouterStateSerializer } from './reducers/router.state';
@@ -21,6 +22,7 @@ import { AuthModule } from './_auth/auth.module';
 import { AuthInterceptor } from './_auth/services/authInterceptor';
 import { GlobalErrorHandler } from './global-error-handler';
 
+const config: SocketIoConfig = { url: 'http://10.10.1.136:8500', options: {} };
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { GlobalErrorHandler } from './global-error-handler';
     BrowserAnimationsModule,
     HttpModule,
     HttpClientModule,
+    SocketIoModule.forRoot(config),
     AppRoutingModule,
     /**
      * StoreModule.forRoot is imported once in the root module, accepting a reducer

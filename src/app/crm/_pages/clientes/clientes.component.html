@@ -1,0 +1,35 @@
+<td-layout-nav logo="assets:siipap-rx2"  navigationRoute="/">
+  
+  <button md-icon-button td-menu-button  tdLayoutToggle> 
+      <md-icon>menu</md-icon>
+  </button>
+    
+  <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <span flex></span>
+    <span>CRM Clientes </span>
+    <span flex></span>
+    <span> SX-Contabilidad</span>
+    <button md-icon-button><md-icon >settings</md-icon></button>
+    <sx-module-selector></sx-module-selector>
+  </div>
+
+  <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
+      
+    <md-card >
+      <md-card-title>Registro de tarjeta de lealtad</md-card-title>
+      <md-card-subtitle>
+        Pase la tarjeta por la lectora para registrar el número
+      </md-card-subtitle>
+      <md-card-content flex>
+        Tarjeta# <h2>{{tarjeta}}</h2>
+      </md-card-content>
+    </md-card>
+
+  </div>
+    
+  <td-layout-footer color="primary">
+    <sx-page-footer></sx-page-footer>
+  </td-layout-footer>
+
+</td-layout-nav>
+      

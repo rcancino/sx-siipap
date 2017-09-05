@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { 
   MainPageComponent,
-  MainDashboardComponent
+  MainDashboardComponent,
+  ClientesComponent
 } from './_pages';
 
 const routes: Routes = [
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: 'home',
         component: MainDashboardComponent
+      },
+      {
+        path: 'clientes',
+        component: ClientesComponent
       },
     ]
   }
