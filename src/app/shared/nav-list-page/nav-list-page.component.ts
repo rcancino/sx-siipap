@@ -14,6 +14,7 @@ export class NavListPageComponent implements AfterViewInit {
   @Input() color = 'primary';
   @Input() navmenu: Array<any> = [];
   @Input() sideNavWidth = '250px'
+  @Input() modulo: string;
 
   constructor(private _changeDetectorRef: ChangeDetectorRef,
               public media: TdMediaService,

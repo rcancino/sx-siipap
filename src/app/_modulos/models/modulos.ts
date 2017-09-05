@@ -46,13 +46,20 @@ export const MODULOS: Modulo[] = [
   },
   {
     id: 7,
+    nombre: 'CRM',
+    path: '/crm',
+    descripcion: 'Customer relationship management ',
+    icon: 'people'
+  },
+  {
+    id: 8,
     nombre: 'BI',
     path: '/bi',
     descripcion: 'Bussiness Intelligence ',
     icon: 'poll'
   },
   {
-    id: 8,
+    id: 9,
     nombre: 'Admin',
     path: '/admin',
     descripcion: 'Adminsitracón de sistemas',

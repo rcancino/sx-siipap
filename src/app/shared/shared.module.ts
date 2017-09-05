@@ -34,6 +34,7 @@ import { MomentModule } from 'angular2-moment';
 import { HasRoleDirective } from './directives/has-role.directive';
 import { SucursalFieldComponent } from './_fields/sucursal-field/sucursal-field.component';
 import { ProductoFieldComponent } from './_fields/producto-field/producto-field.component';
+import { GlobalUserNavListComponent } from './global-user-nav-list/global-user-nav-list.component';
 
 
 const FLEX_LAYOUT_MODULES: any[] = [
@@ -94,6 +95,7 @@ const COMPONENTS: any[] = [
     HasRoleDirective,
     SucursalFieldComponent,
     ProductoFieldComponent,
+    GlobalUserNavListComponent,
   ],
   exports: [
     ANGULAR_MODULES,
@@ -111,6 +113,7 @@ const COMPONENTS: any[] = [
     HasRoleDirective,
     SucursalFieldComponent,
     ProductoFieldComponent,
+    GlobalUserNavListComponent,
   ]
 })
 export class SharedModule { }

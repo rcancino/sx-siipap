@@ -7,7 +7,7 @@ import {
 } from '@ngrx/store';
 import * as fromRouter from '@ngrx/router-store';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 /**
  * Every reducer module's default export is the reducer function itself. In
@@ -16,8 +16,8 @@ import { environment } from '../../environments/environment';
  * notation packages up all of the exports into a single object.
  */
 import { RouterStateUrl } from './router.state';
-import * as fromLayout from '../core/store/layout/layout.reducer';
-import * as fromModulos from '../_modulos/reducers/modulos.reducers';
+import * as fromLayout from '../../core/store/layout/layout.reducer';
+import * as fromModulos from '../../_modulos/reducers/modulos.reducers';
 
 
 
