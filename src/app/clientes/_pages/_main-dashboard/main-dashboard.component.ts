@@ -24,7 +24,7 @@ export class MainDashboardComponent implements OnInit, AfterViewInit {
   view: any[] = [700, 400];
 
   // options
-  showXAxis: boolean = true;
+  showXAxis = true;
   showYAxis: boolean = true;
   gradient: boolean = false;
   showLegend: boolean = false;
@@ -59,7 +59,7 @@ export class MainDashboardComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // broadcast to all listener observables when loading the page
     this.media.broadcast();
-    this._titleService.setTitle( 'SX-CONTABILIDAD' );
+    this._titleService.setTitle( 'SIIPAP-SX' );
   }
 
   // ngx transform using covalent digits pipe

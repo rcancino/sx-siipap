@@ -35,6 +35,7 @@ import { HasRoleDirective } from './directives/has-role.directive';
 import { SucursalFieldComponent } from './_fields/sucursal-field/sucursal-field.component';
 import { ProductoFieldComponent } from './_fields/producto-field/producto-field.component';
 import { GlobalUserNavListComponent } from './global-user-nav-list/global-user-nav-list.component';
+import { ConsultasRapidasComponent } from './_components/consultas-rapidas/consultas-rapidas.component';
 
 
 const FLEX_LAYOUT_MODULES: any[] = [
@@ -96,6 +97,7 @@ const COMPONENTS: any[] = [
     SucursalFieldComponent,
     ProductoFieldComponent,
     GlobalUserNavListComponent,
+    ConsultasRapidasComponent,
   ],
   exports: [
     ANGULAR_MODULES,
@@ -114,6 +116,7 @@ const COMPONENTS: any[] = [
     SucursalFieldComponent,
     ProductoFieldComponent,
     GlobalUserNavListComponent,
+    ConsultasRapidasComponent,
   ]
 })
 export class SharedModule { }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from "@ngrx/store";
-import { Observable } from "rxjs/Observable";
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
 
 import * as fromRoot from '../../reducers';
-import { Modulo } from "../../_modulos/models/modulo";
+import { Modulo } from '../../_modulos/models/modulo';
 
 @Component({
   selector: 'sx-module-selector',
