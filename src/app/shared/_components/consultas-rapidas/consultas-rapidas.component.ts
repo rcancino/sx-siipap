@@ -14,7 +14,7 @@ export class ConsultasRapidasComponent implements OnInit {
 
   ngOnInit() {
     this.consultas$ = Observable.of([
-      { path: '/clientes', nombre: 'Clientes', descripcion: 'Consulta rápida de clientes', icon: 'people'}
+      { path: '/crm/clientes', nombre: 'Clientes', descripcion: 'Consulta rápida de clientes', icon: 'people'}
     ])
   }
 

@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { ClientesRoutingModule } from './clientes-routing.module';
 import { 
-  MainPageComponent, MainDashboardComponent } from './_pages';
+  MainPageComponent,
+  MainDashboardComponent,
+  ClienteDashboardComponent
+} from './_pages';
+
 
 
 @NgModule({
@@ -13,6 +17,6 @@ import {
   ],
   declarations: [
     MainPageComponent, 
-    MainDashboardComponent]
+    MainDashboardComponent, ClienteDashboardComponent]
 })
 export class ClientesModule { }

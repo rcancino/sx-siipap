@@ -118,30 +118,8 @@
             </a>
           </md-card-actions>
         </md-card>
-        <md-card id="dashboard-favorites-card" class="push-top">
-          <md-card-title>Favoritos</md-card-title>
-          <md-card-subtitle>Saldos de cuentas</md-card-subtitle>
-          <md-divider></md-divider>
-          <md-nav-list class="will-load favorite-list">
-            <ng-template tdLoading="favorites.load">
-              <ng-template let-item let-last="last" ngFor [ngForOf]="products">
-                <md-list-item layout-align="row" [routerLink]="['/product']">
-                  <md-icon md-list-avatar>{{item.icon}}</md-icon>
-                  <h3 md-line> {{item.name}} </h3>
-                  <p md-line> {{item.description}} </p>
-                </md-list-item>
-                <md-divider *ngIf="!last" md-inset></md-divider>
-              </ng-template>
-            </ng-template>
-          </md-nav-list>
-          <md-divider></md-divider>
-          <md-card-actions>
-            <a md-button color="accent" class="text-upper" [routerLink]="['/product']">
-              <span>Ver mas</span>
-            </a>
-          </md-card-actions>
-        </md-card>
-      </div> -->
+        
+      </div>
     </div>
 
   <td-layout-footer color="primary">

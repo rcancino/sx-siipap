@@ -4,7 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { 
   MainPageComponent,
   MainDashboardComponent,
-  ClientesComponent
+  ClientesComponent,
+  ClienteDashboardComponent,
+  PropiedadesComponent,
+  LealtadComponent
 } from './_pages';
 
 const routes: Routes = [
@@ -25,6 +28,15 @@ const routes: Routes = [
         path: 'clientes',
         component: ClientesComponent
       },
+      {
+        path: 'cliente/:id',
+        component: ClienteDashboardComponent,
+        children: [
+          { path: '', redirectTo: 'propiedades', pathMatch: 'full'},
+          { path: 'propiedades', component: PropiedadesComponent },
+          { path: 'lealtad', component: LealtadComponent }
+        ]
+      }
     ]
   }
 ];

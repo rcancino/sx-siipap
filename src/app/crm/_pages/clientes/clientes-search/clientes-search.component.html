@@ -1,0 +1,44 @@
+<md-card>
+  <div layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
+    <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+      <span class="md-title">Catálogo de clientes</span>
+    </span>
+    <td-search-box #searchBox 
+      backIcon="arrow_back" 
+      class="push-right-sm" 
+      placeholder="Buscar" (searchDebounce)="searchCliente($event)" flex>
+    </td-search-box>
+    <span>
+      <button md-icon-button [mdMenuTriggerFor]="toolbarMenu"><md-icon>more_vert</md-icon></button>
+      <md-menu #toolbarMenu="mdMenu">
+        <button md-menu-item>
+          <md-icon>settings</md-icon>
+          <span>Filtros</span>
+        </button>
+      </md-menu>
+    </span>
+  </div>
+  <md-divider></md-divider>  
+  
+  <div class="will-load">
+    <md-card-content >
+        <ng-template let-socio let-last="last" ngFor [ngForOf]="socios">
+            <a md-list-item (click)="select(socio)" >
+              <md-icon md-list-avatar  color="accent">account_circle</md-icon>
+              <h3 md-line> {{socio.nombre}} </h3>
+              <span md-line>{{socio.numeroDeSocio}} Modificado: {{socio.lastUpdated | date: 'dd/MM/yyyy HH:mm'}} </span>
+              <span flex></span>
+              <span hide-xs  class="tc-deep-orange-700"> {{socio.tipo}} {{socio.documento}}</span>
+              <span hide-xs  class="text-right md-body-1 tc-grey-500 pad-right">
+                Modificado: {{socio.lastUpdated | date: 'dd/MM/yyyy HH:mm'}}
+              </span>
+              <span hide-xs flex="30">
+                 {{socio.dateCreated  | amLocale:'es'| amTimeAgo:true}} de socio
+              </span>
+            </a>
+  
+            <md-divider md-inset *ngIf="!last"></md-divider>
+          </ng-template>
+    </md-card-content>
+  </div>
+</md-card> 

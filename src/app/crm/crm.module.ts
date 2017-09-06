@@ -5,7 +5,12 @@ import { CrmRoutingModule } from './crm-routing.module';
 import { 
   MainPageComponent, 
   MainDashboardComponent,
-  ClientesComponent } from './_pages';
+  ClientesComponent,
+  ClienteDashboardComponent,
+  PropiedadesComponent,
+  LealtadComponent,
+  ClientesSearchComponent,
+} from './_pages';
 
 @NgModule({
   imports: [
@@ -15,6 +20,11 @@ import {
   declarations: [
     MainPageComponent, 
     MainDashboardComponent, 
-    ClientesComponent]
+    ClientesComponent,
+    ClienteDashboardComponent,
+    PropiedadesComponent,
+    LealtadComponent,
+    ClientesSearchComponent,
+  ]
 })
 export class CrmModule { }

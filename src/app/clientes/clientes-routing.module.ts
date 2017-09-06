@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { 
   MainPageComponent,
-  MainDashboardComponent
+  MainDashboardComponent,
+  ClienteDashboardComponent
 } from './_pages';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
         component: MainDashboardComponent
       },
     ]
+  },
+  {
+    path: 'dashboard',
+    component: ClienteDashboardComponent
   }
 ];
 
