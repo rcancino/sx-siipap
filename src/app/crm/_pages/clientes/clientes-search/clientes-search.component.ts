@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ClientesSearchComponent implements OnInit {
 
   @Output() search = new EventEmitter<string>();
+  @Output() tarjeta = new EventEmitter<string>();
 
   @Input() clientes;
 
@@ -18,5 +19,9 @@ export class ClientesSearchComponent implements OnInit {
 
   searchCliente(term: string) {
     this.search.emit(term);
+  }
+
+  searchTarjeta(){
+    this.tarjeta.emit('Buscar tarjeta');
   }
 }

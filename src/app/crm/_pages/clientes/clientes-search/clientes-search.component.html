@@ -11,9 +11,9 @@
     <span>
       <button md-icon-button [mdMenuTriggerFor]="toolbarMenu"><md-icon>more_vert</md-icon></button>
       <md-menu #toolbarMenu="mdMenu">
-        <button md-menu-item>
-          <md-icon>settings</md-icon>
-          <span>Filtros</span>
+        <button md-menu-item (click)="searchTarjeta()">
+          <md-icon>loyalty</md-icon>
+          <span>Tarjeta de lealtad</span>
         </button>
       </md-menu>
     </span>
@@ -22,23 +22,24 @@
   
   <div class="will-load">
     <md-card-content >
-        <ng-template let-socio let-last="last" ngFor [ngForOf]="socios">
-            <a md-list-item (click)="select(socio)" >
+      <md-list>
+        <ng-template let-cliente let-last="last" ngFor [ngForOf]="clientes">
+            <a md-list-item (click)="select(cliente)" >
               <md-icon md-list-avatar  color="accent">account_circle</md-icon>
-              <h3 md-line> {{socio.nombre}} </h3>
-              <span md-line>{{socio.numeroDeSocio}} Modificado: {{socio.lastUpdated | date: 'dd/MM/yyyy HH:mm'}} </span>
+              <h3 md-line> {{cliente.nombre}} </h3>
+              <span md-line>{{cliente.clave}} Modificado: {{cliente.lastUpdated | date: 'dd/MM/yyyy HH:mm'}} </span>
               <span flex></span>
-              <span hide-xs  class="tc-deep-orange-700"> {{socio.tipo}} {{socio.documento}}</span>
+              <span hide-xs  class="tc-deep-orange-700">pendiente</span>
               <span hide-xs  class="text-right md-body-1 tc-grey-500 pad-right">
-                Modificado: {{socio.lastUpdated | date: 'dd/MM/yyyy HH:mm'}}
+                Modificado: {{cliente.lastUpdated | date: 'dd/MM/yyyy HH:mm'}}
               </span>
               <span hide-xs flex="30">
-                 {{socio.dateCreated  | amLocale:'es'| amTimeAgo:true}} de socio
+                 {{cliente.dateCreated  | amLocale:'es'| amTimeAgo:true}} de cliente
               </span>
             </a>
-  
             <md-divider md-inset *ngIf="!last"></md-divider>
           </ng-template>
+      </md-list>
     </md-card-content>
   </div>
 </md-card> 
