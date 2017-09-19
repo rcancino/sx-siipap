@@ -59,7 +59,7 @@ export class MainDashboardComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // broadcast to all listener observables when loading the page
     this.media.broadcast();
-    this._titleService.setTitle( 'SX-CONTABILIDAD' );
+    this._titleService.setTitle( 'SX-TESORERIA' );
   }
 
   // ngx transform using covalent digits pipe

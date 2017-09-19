@@ -1,0 +1,78 @@
+<md-card>
+  <md-card-title-group>
+    <md-card-title>{{producto.clave}}
+      <span class="text-xs tc-red-700" *ngIf="!producto.activo">
+        SUSPENDIDO
+      </span>
+    </md-card-title>
+  </md-card-title-group>
+  <md-divider></md-divider>
+  <md-card-content>
+    <md-list>
+      
+      <md-list-item>
+        <md-icon mdListAvatar>description</md-icon>
+        <span mdLine>{{producto.descripcion}}</span>
+        <span flex></span>
+        <span flex="30">({{producto.unidad}})</span>
+      </md-list-item>
+      <md-divider md-inset></md-divider>
+      
+      <md-list-item>
+          <md-icon mdListAvatar>attach_money</md-icon>
+          <h4 mdLine>Contado: {{producto.precioContado | number:'1.2-2'}}</h4>
+          
+          <h4 flex="50">Crédito: {{producto.precioContado | number:'1.2-2'}}</h4>
+      </md-list-item>
+      <md-divider md-inset></md-divider>
+        
+      <md-list-item>
+        <md-icon mdListAvatar>info</md-icon>
+        <span mdLine>
+          <span> Kilos: {{producto.kilos}}</span>
+        </span>
+        <span flex="50"> Gramos: {{producto.gramos}}</span>
+        
+      </md-list-item>
+      <md-divider md-inset></md-divider>
+
+      <md-list-item>
+        <md-icon mdListAvatar>info</md-icon>
+        <span mdLine>
+          <span> Largo: {{producto.largo}}</span>
+        </span>
+        <span flex="50"> Ancho: {{producto.ancho}}</span>
+      </md-list-item>
+      <md-divider md-inset></md-divider>
+
+      <md-list-item>
+        <md-icon mdListAvatar>info</md-icon>
+        <span mdLine>
+          <span> Línea: {{producto.linea}}</span>
+        </span>
+        <span flex="50"> Marca: {{producto.marca}}</span>
+      </md-list-item>
+      <md-divider md-inset></md-divider>
+
+      <md-list-item>
+        <md-icon mdListAvatar>desktop_mac</md-icon>
+        <h3 mdLine> {{producto.clase}} </h3>
+        <span flex></span>
+        <span hide-xs flex="10">
+          {{producto.presentacion}}
+        </span>
+        <span hide-xs flex="60" class="text-right md-body-1 tc-grey-500 pad-right">
+          {{producto.lastUpdated | date:'short'}}
+        </span>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+
+  <md-divider></md-divider>
+  <md-card-actions>
+    <a md-button color="accent" [routerLink]="['edit',producto.id]"
+      class="text-upper"> Detalle <md-icon>arrow_forward</md-icon>
+    </a>
+  </md-card-actions>
+  
+</md-card>

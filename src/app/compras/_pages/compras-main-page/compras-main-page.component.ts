@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ComprasMainPageComponent implements OnInit {
 
   
-  navmenu: Object[] = [
-    {route: 'ordenes', title: 'Compras', description: 'Ordenes de compra', icon:  'store', tooltip: 'Ordenes de compras'},
-    {route: 'alcance', title: 'Alcances', icon: 'repeat'},
-    {route: 'recepciones', title: 'Recepciones', icon: 'flight_land'},
-    {route: 'existencias', title: 'Existencias', icon: 'layers'},
-    {route: 'dashboard', title: 'Tableros', icon: 'dashboard'},
-    {route: 'catalogos', title: 'Catálogos', icon: 'view_quilt'},
+  navigation: Object[] = [
+    {path: 'ordenes', nombre: 'Compras', descripcion: 'Ordenes de compra', icon:  'store'},
+    {path: 'alcance', nombre: 'Alcances', icon: 'repeat'},
+    {path: 'recepciones', nombre: 'Recepciones', icon: 'flight_land'},
+    {path: 'existencias', nombre: 'Existencias', icon: 'layers'},
+    {path: 'dashboard', nombre: 'Tableros', icon: 'dashboard'},
+    {path: 'catalogos', nombre: 'Catálogos', icon: 'view_quilt'},
   ];
 
   constructor() { }

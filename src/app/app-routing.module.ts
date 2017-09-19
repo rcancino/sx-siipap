@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'clientes',
     loadChildren: './clientes/clientes.module#ClientesModule'
+  },
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
   }
 
 ];

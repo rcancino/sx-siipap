@@ -1,0 +1,18 @@
+<div layout>
+    <md-card flex="50">
+      <md-card-title>Marcas de productos</md-card-title>
+      <md-divider></md-divider>
+      <md-card-content class="will-load">
+        <sx-marcas-list [marcas]="marcas$ | async" (selection)="onSelection($event)">
+  
+        </sx-marcas-list>
+      </md-card-content>
+    </md-card>
+  
+    <div flex="50" *ngIf=" selected !== undefined" class="will-load">
+        <sx-marca-view [marca]="selected" (modificacionNombre)="onModificacionNombre($event)">
+  
+        </sx-marca-view>
+    </div>
+    
+  </div>

@@ -2,8 +2,6 @@ import { Component, OnInit,  AfterViewInit } from '@angular/core';
 import { Title }     from '@angular/platform-browser';
 import { TdLoadingService, TdDigitsPipe, TdMediaService } from '@covalent/core';
 
-// import { UserService, IUser } from '../users';
-// import { ItemsService, ProductsService, AlertsService } from '../../services';
 import { multi } from './data';
 
 @Component({

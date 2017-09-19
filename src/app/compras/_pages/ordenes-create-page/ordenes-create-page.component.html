@@ -26,15 +26,14 @@
           <div layout-gt-xs="row" layout-align="start center" layout-padding>
 
             <md-input-container >
-              <input mdInput [mdDatepicker]="picker1"  placeholder="Fecha"  formControlName="fecha">
-              <button mdSuffix [mdDatepickerToggle]="picker1"></button>
+              <input mdInput [mdDatepicker]="fecha"  placeholder="Fecha"  formControlName="fecha">
+              <md-datepicker #fecha></md-datepicker>
             </md-input-container>
             
 
             <md-input-container >
-              <input mdInput [mdDatepicker]="picker2" placeholder="Entega"  formControlName="entrega">
-              <button mdSuffix [mdDatepickerToggle]="picker2"></button>
-              <md-datepicker #picker2></md-datepicker>
+              <input mdInput [mdDatepicker]="entrega" placeholder="Entega"  formControlName="entrega">
+              <md-datepicker #entrega></md-datepicker>
             </md-input-container>
 
             <sx-sucursal-field [parent]="form.get('stepOne')" flex></sx-sucursal-field>

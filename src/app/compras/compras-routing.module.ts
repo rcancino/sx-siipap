@@ -1,8 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ComprasMainPageComponent } from "./_pages/compras-main-page/compras-main-page.component";
-import { OrdenesPageComponent } from "./_pages/ordenes-page/ordenes-page.component";
-import { OrdenesCreatePageComponent } from "./_pages/ordenes-create-page/ordenes-create-page.component";
+
+import { 
+  ComprasMainPageComponent,
+  OrdenesPageComponent,
+  OrdenesCreatePageComponent,
+  ComprasMainDashboardComponent,
+  CatalogosPageComponent,
+  LineasPageComponent,
+  MarcasPageComponent,
+  ClasesPageComponent,
+  ProductosPageComponent,
+  ProveedoresPageComponent,
+  ProductoEditComponent,
+ } from "./_pages";
 
 
 const routes: Routes = [
@@ -10,8 +21,22 @@ const routes: Routes = [
     path: '',
     component: ComprasMainPageComponent,
     children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: "full"},
+      { path: 'dashboard', component: ComprasMainDashboardComponent},
       { path: 'ordenes', component: OrdenesPageComponent},
       { path: 'ordenes/create', component: OrdenesCreatePageComponent},
+      { 
+        path: 'catalogos',
+        component: CatalogosPageComponent,
+        children: [
+          {path: 'lineas', component: LineasPageComponent},
+          {path: 'marcas', component: MarcasPageComponent},
+          {path: 'clases', component: ClasesPageComponent},
+          {path: 'productos', component: ProductosPageComponent},
+          {path: 'productos/edit/:id', component: ProductoEditComponent},
+          {path: 'proveedores', component: ProveedoresPageComponent}
+        ]
+      }
     ]
   },
 ];

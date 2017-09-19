@@ -1,0 +1,18 @@
+<div layout>
+    <md-card flex="50">
+      <md-card-title>Clases de productos registradas</md-card-title>
+      <md-divider></md-divider>
+      <md-card-content class="will-load">
+        <sx-clases-list [clases]="clases$ | async" (selection)="onSelection($event)">
+  
+        </sx-clases-list>
+      </md-card-content>
+    </md-card>
+  
+    <div flex="50" *ngIf=" selected !== undefined" class="will-load">
+        <sx-clase-view [clase]="selected" (modificacionNombre)="onModificacionNombre($event)">
+  
+        </sx-clase-view>
+    </div>
+    
+  </div>

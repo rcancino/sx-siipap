@@ -1,0 +1,49 @@
+<form novalidate [formGroup]="form" (ngSubmit)="onSave()" class="usuario-form">
+<md-card class="usuario-form">
+  <md-card-title> Alta de usuario:  {{nombre$ | async}} </md-card-title>
+  <md-divider></md-divider>
+  <md-card-content >
+    <div layout="column" >
+      
+      <md-form-field class="fill">
+        <input type="text" mdInput placeholder="username" formControlName="username">
+        <md-error>Nombre de usuario invalido</md-error>
+      </md-form-field>
+      
+      <md-form-field class="fill">
+        <input type="email" mdInput placeholder="email" formControlName="email">
+        <md-error>Correo electrónico invalido</md-error>
+      </md-form-field>
+
+      <md-form-field class="fill">
+        <input type="text" mdInput placeholder="Apellido paterno" formControlName="apellidoPaterno">
+      </md-form-field>
+
+      <md-form-field class="fill">
+        <input type="text" mdInput placeholder="Apellido materno" formControlName="apellidoMaterno">
+      </md-form-field>
+
+      <md-form-field class="fill">
+        <input type="text" mdInput placeholder="Nombres" formControlName="nombres">
+      </md-form-field>
+      
+      <md-form-field class="fill">
+        <input type="password" mdInput placeholder="Password" formControlName="password">
+      </md-form-field>
+
+      <md-form-field class="fill">
+        <input type="password" mdInput placeholder="Confirmar password" formControlName="confirmPassword">
+      </md-form-field>
+
+    </div>
+  </md-card-content>
+  <md-divider></md-divider>
+
+  <md-card-actions>
+    <button type="submit" md-button color="primary" [disabled]="form.invalid"> Salvar</button>
+    <button type="button" md-button (click)="cancel()"> Cancelar</button>
+    <button type="button" md-button (click)="reset()"> Limpar</button>
+  </md-card-actions>
+
+</md-card>
+</form>

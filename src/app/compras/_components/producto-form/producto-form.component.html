@@ -1,0 +1,37 @@
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+<md-card  *tdLoading="'asyncCall'; mode:'indeterminate'; type:'circle'; strategy:'overlay'; color:'accent'">
+  <md-card-title>Edición de: {{form.get('descripcion').value}}</md-card-title>
+  <md-divider></md-divider>
+
+  <div layout layout-padding>
+
+    <div flex layout="column">
+      
+      <md-form-field flex >
+        <input type="text" mdInput placeholder="Clave" formControlName="clave">
+      </md-form-field>
+
+      <md-form-field flex class="fill">
+        <input type="text" mdInput placeholder="Descripción" formControlName="descripcion">
+      </md-form-field>
+
+      <md-form-field flex class="fill">
+        <input type="text" mdInput placeholder="Comentario" formControlName="comentario">
+      </md-form-field>
+
+    </div>
+    
+    <div flex>
+      
+    </div>
+  </div>
+    
+  <md-divider></md-divider>   
+  <md-card-actions>
+    <button type="button" md-button> Cancelar </button>
+    <button type="button" md-button> Revertir </button>
+    <button type="submit" color="primary" md-button [disabled]="form.invalid" > Salvar </button>
+  </md-card-actions>
+
+</md-card>
+</form>

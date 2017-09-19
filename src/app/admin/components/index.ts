@@ -1,0 +1,1 @@
+export { UsuarioCreateFormComponent } from './usuario-create-form/usuario-create-form.component';

@@ -28,6 +28,8 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/concat';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/merge';
+import 'rxjs/add/observable/zip';
 
 if (environment.production) {
   enableProdMode();

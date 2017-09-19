@@ -2,8 +2,6 @@ import { Component, OnInit,  AfterViewInit } from '@angular/core';
 import { Title }     from '@angular/platform-browser';
 import { TdLoadingService, TdDigitsPipe, TdMediaService } from '@covalent/core';
 
-// import { UserService, IUser } from '../users';
-// import { ItemsService, ProductsService, AlertsService } from '../../services';
 import { multi } from './data';
 
 @Component({
@@ -59,7 +57,7 @@ export class MainDashboardComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // broadcast to all listener observables when loading the page
     this.media.broadcast();
-    this._titleService.setTitle( 'SX-CONTABILIDAD' );
+    this._titleService.setTitle( 'SX-ADMIN' );
   }
 
   // ngx transform using covalent digits pipe

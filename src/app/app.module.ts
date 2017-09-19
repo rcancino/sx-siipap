@@ -21,6 +21,7 @@ import { schema } from './db';
 import { AuthModule } from './_auth/auth.module';
 import { AuthInterceptor } from './_auth/services/authInterceptor';
 import { GlobalErrorHandler } from './global-error-handler';
+import { ProductosModule } from 'app/productos/productos.module';
 
 const config: SocketIoConfig = { url: 'http://10.10.1.136:8500', options: {} };
 
@@ -76,6 +77,7 @@ const config: SocketIoConfig = { url: 'http://10.10.1.136:8500', options: {} };
     CoreModule,
 
     AuthModule.forRoot(),
+    ProductosModule.forRoot(),
 
   ],
   providers: [

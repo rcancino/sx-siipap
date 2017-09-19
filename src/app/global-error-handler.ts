@@ -14,11 +14,11 @@ export  class GlobalErrorHandler implements ErrorHandler {
 
   handleError(error: any): void {
 
-    const store = this.injector.get(Store);
+    const store = this.injector.get<any>(Store);
     if (error instanceof HttpErrorResponse && error.status === 401) {
       console.log('SX-Error handler HttpErrorResponse: ', error.status);
-      console.log('Store: ', store);
-      store.dispatch(new auth.LoginRedirect({}))
+      // console.log('Store: ', store);
+     store.dispatch(new auth.LoginRedirect({}))
     } else {
       console.log('SX-Error handler:', error);
     }
